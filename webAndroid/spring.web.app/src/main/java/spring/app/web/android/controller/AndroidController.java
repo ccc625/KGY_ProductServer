@@ -12,9 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import objectTest.Greeting;
+import spring.app.web.android.service.UserService;
 
 /**
  * Handles requests for the application home page.
@@ -47,8 +49,8 @@ public class AndroidController {
 	
 	@RequestMapping(value = "/userService", method = RequestMethod.GET)
 	@ResponseBody
-	public Greeting userService()
+	public UserService userService(@RequestParam(value="api", defaultValue="defaultAPI")String api, @RequestParam(value="id", defaultValue="1")String id)
 	{	
-		return new Greeting(counter.incrementAndGet(), String.format(template, "jimin"));
+		return new UserService(api, Integer.valueOf(id));
 	}
 }
