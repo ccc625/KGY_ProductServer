@@ -6,3 +6,7 @@ kgy/target/m2e-wtp/web-resources/META-INF/maven/com.andorid/kgy/pom.xml
 kgy/target/classes/config/spring/context-datasource.xml
 kgy/pom.xml
 kgy/target/kgy-1.0.0-BUILD-SNAPSHOT.war
+androidServer/.metadata/
+androidServer/Servers/
+androidServer/RemoteSystemsTempFiles/
+androidServer/kgy/target/kgy-1.0.0-BUILD-SNAPSHOT.war
